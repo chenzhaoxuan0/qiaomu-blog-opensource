@@ -1,4 +1,4 @@
-name = "qiaomu-blog-opensource"
+name = "zxc-blog-qiaomuopensource"
 main = "worker.ts"
 compatibility_date = "2026-04-14"
 compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
