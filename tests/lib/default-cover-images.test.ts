@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest'
 import {
   DEFAULT_POST_COVER_IMAGES,
   pickDefaultPostCoverPath,
+  resolveDefaultSiteCoverImage,
   resolvePostCoverImage,
 } from '@/lib/default-cover-images'
 
@@ -34,5 +35,10 @@ describe('default cover images', () => {
       { cover_image: 'https://cdn.example.com/cover.jpg', slug: 'post-slug', title: 'Post title' },
       { baseUrl: 'https://blog.qiaomu.ai' },
     )).toBe('https://cdn.example.com/cover.jpg')
+  })
+
+  it('resolves the site-wide fallback cover image', () => {
+    expect(resolveDefaultSiteCoverImage('https://blog.qiaomu.ai'))
+      .toBe('https://blog.qiaomu.ai/default-covers/qm-cover-1.jpg')
   })
 })

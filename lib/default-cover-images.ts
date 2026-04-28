@@ -3,6 +3,7 @@ const DEFAULT_POST_COVER_IMAGES = [
   '/default-covers/qm-cover-2.jpg',
   '/default-covers/qm-cover-3.jpg',
 ] as const
+const DEFAULT_SITE_COVER_IMAGE = DEFAULT_POST_COVER_IMAGES[0]
 
 const FALLBACK_COVER_SEED = 'qmblog-default-cover'
 
@@ -66,4 +67,8 @@ export function resolvePostCoverImage(
   return absolutizeSiteAssetUrl(pickDefaultPostCoverPath(input), options.baseUrl)
 }
 
-export { DEFAULT_POST_COVER_IMAGES }
+export function resolveDefaultSiteCoverImage(baseUrl?: string) {
+  return absolutizeSiteAssetUrl(DEFAULT_SITE_COVER_IMAGE, baseUrl)
+}
+
+export { DEFAULT_POST_COVER_IMAGES, DEFAULT_SITE_COVER_IMAGE }

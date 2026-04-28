@@ -7,6 +7,7 @@ import { CustomJsInjector } from "@/components/CustomJsInjector";
 import { FONT_CONFIG, THEME_OPTIONS, THEME_STORAGE_KEY, normalizeTheme } from "@/lib/appearance";
 import { getAppCloudflareEnv } from "@/lib/cloudflare";
 import { getSetting } from "@/lib/db";
+import { resolveDefaultSiteCoverImage } from "@/lib/default-cover-images";
 import { getSiteUrl, getSiteUrlObject } from "@/lib/site-config";
 
 const geistSans = localFont({
@@ -34,6 +35,7 @@ const geistMono = localFont({
 });
 
 const SITE_URL = getSiteUrl()
+const DEFAULT_SITE_OG_IMAGE = resolveDefaultSiteCoverImage(SITE_URL)
 
 export const metadata: Metadata = {
   metadataBase: getSiteUrlObject(),
@@ -67,20 +69,20 @@ export const metadata: Metadata = {
     description: '记录思考，分享所学，留住当下。技术、生活、读书笔记的数字花园。',
     images: [
       {
-        url: '/icon-512.png',
-        width: 512,
-        height: 512,
+        url: DEFAULT_SITE_OG_IMAGE,
+        width: 1280,
+        height: 720,
         alt: '乔木博客',
       },
     ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     site: '@vista8',
     creator: '@vista8',
     title: '乔木博客',
     description: '记录思考，分享所学，留住当下。技术、生活、读书笔记的数字花园。',
-    images: ['/icon-512.png'],
+    images: [DEFAULT_SITE_OG_IMAGE],
   },
 };
 
