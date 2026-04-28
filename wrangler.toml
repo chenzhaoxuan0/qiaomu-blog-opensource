@@ -23,9 +23,12 @@ service = "zxc-blog-qiaomuopensource"
 
 [[d1_databases]]
 binding = "DB"
+database_name = "zxc-blog-qiaomuopensource-db"
+database_id = "e61a42ed-23dc-42d1-afc0-25f9bea811f1"
 
 [[r2_buckets]]
 binding = "IMAGES"
+bucket_name = "zxc-blog-qiaomuopensource-images"
 
 # Optional Queue binding for background jobs. Uncomment after creating the queue.
 # [[queues.producers]]
