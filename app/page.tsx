@@ -61,7 +61,7 @@ export default async function Home({
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'WebSite',
-            name: '乔木博客',
+            name: '中心角落博客',
             url: BASE_URL,
             description: '记录思考，分享所学，留住当下。技术、生活、读书笔记的数字花园。',
             potentialAction: {
@@ -78,7 +78,7 @@ export default async function Home({
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Organization',
-            name: '乔木博客',
+            name: '中心角落博客',
             url: BASE_URL,
             logo: { '@type': 'ImageObject', url: `${BASE_URL}/icon-512.png` },
           }),

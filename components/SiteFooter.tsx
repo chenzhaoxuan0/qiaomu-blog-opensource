@@ -60,8 +60,17 @@ export function SiteFooter() {
                 href="/admin"
                 className="hover:text-[var(--editor-ink)] transition-colors duration-150 underline-offset-2 hover:underline"
               >
-                向阳乔木
+                中心角落
               </Link>
+              <span>·</span>
+              <a
+                href="https://github.com/joeseesun/qiaomu-blog-opensource"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[var(--editor-ink)] transition-colors duration-150"
+              >
+                感谢向阳乔木博客开源
+              </a>
               <span>·</span>
               <Link
                 href="/editor?new=1"
@@ -76,13 +85,24 @@ export function SiteFooter() {
               </Link>
             </>
           ) : (
-            <button
-              type="button"
-              onClick={() => setOpen(true)}
-              className="hover:text-[var(--editor-ink)] transition-colors duration-150 underline-offset-2 hover:underline"
-            >
-              向阳乔木
-            </button>
+            <>
+              <button
+                type="button"
+                onClick={() => setOpen(true)}
+                className="hover:text-[var(--editor-ink)] transition-colors duration-150 underline-offset-2 hover:underline"
+              >
+                中心角落
+              </button>
+              <span>·</span>
+              <a
+                href="https://github.com/joeseesun/qiaomu-blog-opensource"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[var(--editor-ink)] transition-colors duration-150"
+              >
+                感谢向阳乔木博客开源
+              </a>
+            </>
           )}
         </div>
       </footer>
