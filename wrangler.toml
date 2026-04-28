@@ -15,7 +15,7 @@ binding = "WORKERS_AI"
 
 [[services]]
 binding = "WORKER_SELF_REFERENCE"
-service = "qiaomu-blog-opensource"
+service = "zxc-blog-qiaomuopensource"
 
 # Minimal resource bindings for open-source / Deploy to Cloudflare usage.
 # Modern Wrangler and Deploy buttons can auto-provision these resources.
