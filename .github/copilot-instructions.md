@@ -45,7 +45,7 @@
 **字体策略**：
 - 英文：Geist Sans（简洁现代）
 - 标题：Georgia（经典衬线）
-- 中文正文：TsangerJinKai02（仓耳今楷，提升阅读体验）
+- 中文正文：LXGW WenKai（霞鹜文楷，提升阅读体验）
 
 **参考风格**：
 - ✅ 喜欢：Claude、Stripe、Notion、Linear、Vercel 的简洁精致
