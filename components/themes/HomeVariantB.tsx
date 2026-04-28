@@ -122,7 +122,7 @@ export function HomeVariantB({
             fontFamily: '"Noto Serif SC", "Source Han Serif SC", Georgia, serif',
             color: FG,
           }}>
-            乔木<span style={{ color: ACCENT }}>·</span>博客
+            中心角落<span style={{ color: ACCENT }}>·</span>博客
           </h1>
         </Link>
         <div className="editorial-masthead-meta" style={{
