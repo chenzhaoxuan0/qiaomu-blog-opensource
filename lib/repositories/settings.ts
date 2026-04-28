@@ -10,7 +10,8 @@ export async function getSetting(db: Database, key: string): Promise<string | nu
       .bind(key)
       .first<SettingRow>()
     return row?.value ?? null
-  } catch {
+  } catch (e) {
+    console.error(`[settings] Failed to get setting "${key}":`, e)
     return null
   }
 }

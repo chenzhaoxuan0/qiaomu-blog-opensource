@@ -18,11 +18,7 @@ interface SiteHeaderProps {
   initialTheme?: Theme
 }
 
-const defaultNavLinks: NavLink[] = [
-  { label: 'GitHub', url: 'https://github.com/joeseesun/', openInNewTab: true },
-  { label: 'Twitter', url: 'https://x.com/vista8/', openInNewTab: true },
-  { label: 'RSS', url: '/feed.xml', openInNewTab: false },
-]
+const defaultNavLinks: NavLink[] = []
 
 function getIssueInfo() {
   const now = new Date()

@@ -4,6 +4,7 @@ import { detectRuntimeCapabilities } from '@/lib/runtime-capabilities'
 import { SettingsManager } from './SettingsManager'
 
 export const metadata = { title: '站点设置' }
+export const dynamic = 'force-dynamic'
 
 export default async function SettingsPage() {
   let navLinks = ''
@@ -22,8 +23,12 @@ export default async function SettingsPage() {
       bodyFont = (await getSetting(env.DB, 'body_font')) || ''
       defaultTheme = (await getSetting(env.DB, 'default_theme')) || ''
       categories = await getCategories(env.DB)
+    } else {
+      console.error('[settings] DB binding not available in env')
     }
-  } catch {}
+  } catch (e) {
+    console.error('[settings] Failed to load settings:', e)
+  }
 
   return (
     <div className="space-y-6">

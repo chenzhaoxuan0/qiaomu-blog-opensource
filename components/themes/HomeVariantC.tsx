@@ -33,11 +33,7 @@ function TerminalHeader({
   initialTheme: HomeProps['initialTheme']
   navLinks: SiteNavLink[]
 }) {
-  const defaultLinks = [
-    { label: '~/github', url: 'https://github.com/joeseesun/', openInNewTab: true },
-    { label: '~/twitter', url: 'https://x.com/vista8/', openInNewTab: true },
-    { label: '~/rss', url: '/feed.xml', openInNewTab: false },
-  ]
+  const defaultLinks: { label: string; url: string; openInNewTab: boolean }[] = []
   const links = navLinks.length > 0
     ? navLinks.map(l => ({ ...l, label: `~/${l.label.toLowerCase()}` }))
     : defaultLinks

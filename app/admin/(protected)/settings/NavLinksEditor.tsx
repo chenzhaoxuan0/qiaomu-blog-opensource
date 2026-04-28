@@ -14,12 +14,7 @@ interface Props {
   saving: boolean
 }
 
-const defaultLinks: NavLink[] = [
-  { label: 'GitHub', url: 'https://github.com/joeseesun/', openInNewTab: true },
-  { label: 'Twitter', url: 'https://x.com/vista8/', openInNewTab: true },
-  { label: 'About', url: '/about', openInNewTab: false },
-  { label: 'RSS', url: '/feed.xml', openInNewTab: false },
-]
+const defaultLinks: NavLink[] = []
 
 export function NavLinksEditor({ initialValue, onSave, saving }: Props) {
   const parsed = initialValue ? (() => { try { return JSON.parse(initialValue) } catch { return null } })() : null
