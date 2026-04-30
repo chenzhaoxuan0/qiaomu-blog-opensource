@@ -5,7 +5,7 @@ const CLICK_WINDOW_MS = 5000
 
 export function useClickCountClose(onClose: () => void) {
   const [clickCount, setClickCount] = useState(0)
-  const timerRef = useRef<ReturnType<typeof setTimeout>>()
+  const timerRef = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   const clearTimer = useCallback(() => {
     if (timerRef.current) {
