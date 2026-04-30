@@ -72,6 +72,7 @@ export const metadata: Metadata = {
         url: DEFAULT_SITE_OG_IMAGE,
         width: 1280,
         height: 720,
+<<<<<<< HEAD
         alt: '中心角落博客',
       },
     ],
