@@ -46,7 +46,7 @@ export function AiActionsManager() {
   const [saving, setSaving] = useState(false)
   const [deleteTarget, setDeleteTarget] = useState<AiAction | null>(null)
   const [clickCount, setClickCount] = useState(0)
-  const clickTimerRef = useRef<ReturnType<typeof setTimeout>>()
+  const clickTimerRef = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   const profileOptions = profiles.map(p => ({
     ...p,

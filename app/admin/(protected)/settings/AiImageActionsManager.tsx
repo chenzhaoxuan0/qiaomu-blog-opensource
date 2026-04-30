@@ -56,7 +56,7 @@ export function AiImageActionsManager() {
   const [saving, setSaving] = useState(false)
   const [deleteTarget, setDeleteTarget] = useState<AiImageAction | null>(null)
   const [clickCount, setClickCount] = useState(0)
-  const clickTimerRef = useRef<ReturnType<typeof setTimeout>>()
+  const clickTimerRef = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   const CLICK_THRESHOLD = 3
   const CLICK_WINDOW_MS = 5000
